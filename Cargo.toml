@@ -1,0 +1,30 @@
+[workspace]
+members = [
+  "dist-tracing-backend",
+  "dist-tracing-gateway",
+]
+resolver = "2"
+
+[workspace.package]
+rust-version = "1.78.0"
+edition = "2021"
+authors = ["Dae Choi <daechoi@outlook.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/daechoi/dist-tracing-rs"
+repository = "https://github.com/daechoi/dist-tracing-rs"
+documentation = "https://github.com/daechoi/dist-tracing-rs"
+
+[workspace.dependencies]
+actix-web = "4.8.0"
+anyhow = {version = "1.0.86", features = ["backtrace"]}
+configured = "0.5"
+prost = "0.13"
+walkdir = "2.5.0"
+serde = {version = "1", features= [ "derive"]}
+serde_json={version ="1"}
+tonic =  "0.12.1"
+tonic-build = "0.12.1"
+tokio = {version = "1", features = ["macros", "rt-multi-thread", "signal"]}
+tracing = { version = "0.1", default-features = false }
+tracing-subscriber = { version = "0.3.18", default-features = false, features = ["env-filter", "fmt", "json"] }

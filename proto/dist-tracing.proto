@@ -1,0 +1,12 @@
+syntax = "proto3";
+package dist_tracing;
+
+service Hello {
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {}
+
+message HelloResponse {
+  string msg = 1;
+}
