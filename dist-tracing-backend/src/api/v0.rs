@@ -18,7 +18,7 @@ impl proto::hello_server::Hello for HelloService {
         _request: Request<proto::HelloRequest>,
     ) -> Result<Response<proto::HelloResponse>, Status> {
         let reply = proto::HelloResponse {
-            msg: format!("Hello, I am Rust/Tonic Service!"),
+            msg: "Hello, I am Rust/Tonic Service!".to_string(),
         };
 
         Ok(Response::new(reply))
