@@ -16,7 +16,7 @@ repository = "https://github.com/daechoi/dist-tracing-rs"
 documentation = "https://github.com/daechoi/dist-tracing-rs"
 
 [workspace.dependencies]
-actix-web = "4.8.0"
+actix-web = "4.9.0"
 anyhow = {version = "1.0.86", features = ["backtrace"]}
 configured = "0.5"
 prost = "0.13"
